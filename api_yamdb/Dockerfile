@@ -4,7 +4,9 @@ RUN mkdir /app
 
 WORKDIR /app
 
-COPY api_yamdb .
+COPY . .
+
+RUN pip install --upgrade pip
 
 RUN pip3 install -r ./requirements.txt --no-cache-dir
 
