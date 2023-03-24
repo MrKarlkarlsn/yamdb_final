@@ -8,9 +8,7 @@ services:
     env_file:
       - ./.env
   web:
-    build:
-      context: ../infra_sp2
-      dockerfile: ../api_yamdb/Dockerfile
+    image: mrkarlkarls/infra:latest
     restart: always
     volumes:
       - static_value:/app/static/
