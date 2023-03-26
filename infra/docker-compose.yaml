@@ -25,7 +25,7 @@ services:
       - "80:80"
 
     volumes:
-      - ./default.conf:/etc/nginx/sites-enabled/default.conf
+      - ./default.conf:/etc/nginx/sites-enabled/default
 
       - static_value:/var/html/static/
 
