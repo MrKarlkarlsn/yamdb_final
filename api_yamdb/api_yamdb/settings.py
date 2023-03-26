@@ -16,7 +16,7 @@ SECRET_KEY = str(get_random_secret_key())
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['158.160.39.55']
 
 # Application definition
 
