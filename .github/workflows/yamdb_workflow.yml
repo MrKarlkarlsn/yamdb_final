@@ -71,7 +71,7 @@ jobs:
       with:
         context: api_yamdb/
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/yamdb_api:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/api_yamdb:latest
     -
       name: Send message if build_and_push_to_docker_hub failed
       if: ${{ failure() }}
@@ -96,7 +96,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             sudo systemctl stop nginx 
-            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_api:latest
+            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/api_yamdb:latest
             # sudo docker-compose down -v
             sudo docker-compose down
             rm .env -f
